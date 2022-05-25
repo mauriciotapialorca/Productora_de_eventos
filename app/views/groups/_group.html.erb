@@ -1,0 +1,47 @@
+<div id="<%= dom_id group %>">
+  <p>
+    <strong>Name:</strong>
+    <%= group.name %>
+  </p>
+
+  <p>
+    <strong>Crew:</strong>
+    <%= group.crew %>
+  </p>
+
+  <p>
+    <strong>Debut date:</strong>
+    <%= group.debut_date %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= group.date %>
+  </p>
+
+  <p>
+    <strong>Group type:</strong>
+    <%= group.group_type %>
+  </p>
+
+  <p>
+    <strong>Integer:</strong>
+    <%= group.integer %>
+  </p>
+
+</div>
+
+<th> concerts:</th>
+</td>
+   <% group.concerts.each do |concert| %>
+     <tbody>
+        <tr>
+           <td><%= l concert.date, format: "%d-%b-%Y" %></td>
+           <td><%= concert.place %></td>
+           <td><%= concert.attendance %>  Personas</td>
+           <td><%= concert.duration %> Hora(s)</td>
+        </tr>
+    </tbody>
+</td>
+
+<%end%>
